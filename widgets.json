@@ -47,7 +47,7 @@
             "name": "Gold",
             "icon": "https://cdn-icons-png.flaticon.com/128/10040/10040888.png",
             "action": "navigateToDigitalGold",
-            "enabled": false
+            "enabled": true
         },
         {
             "id": "profile",
@@ -59,7 +59,7 @@
         {
             "id": "try-on",
             "name": "Virtual Try-On",
-            "icon": "assets/virtual.png",
+            "icon": "https://acme9614.github.io/widgets-control/assets/virtual.png",
             "action": "navigateToARVirtualTryOn",
             "enabled": true
         }
