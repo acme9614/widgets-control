@@ -9,29 +9,39 @@ async function loadWidgets() {
 
     const data = await res.json();
 
-    const container = document.getElementById("servicesContainer");
+    const container = document.getElementById("widgetsContainer");
+    const drawerContainer = document.getElementById("drawerContainer");
     if (!container) {
-      console.warn("servicesContainer not found");
+      console.warn("widgetsContainer not found");
       return;
     }
 
     // Clear old UI
     container.innerHTML = "";
 
-    data.services.forEach(service => {
+    data.widgets.forEach(widget => {
 
       // ✅ Skip disabled widgets
-      if (service.enabled === false) return;
+      if (widget.enabled === false) return;
 
       // ✅ Check render function
-      if (typeof window.renderService !== "function") {
-        console.error("renderService() not defined in this page");
+      if (typeof window.renderWidget !== "function") {
+        console.error("renderWidget() not defined in this page");
         return;
       }
 
       // ✅ Render widget
-      const html = window.renderService(service);
+      const html = window.renderWidget(widget);
       container.innerHTML += html;
+
+       if (drawerContainer) {
+        drawerContainer.innerHTML += `
+          <a href="#" onclick="${widget.action}()"
+             class="block text-lg hover:text-yellow-600">
+             ${widget.name}
+          </a>
+        `;
+      }
 
     });
 
@@ -39,9 +49,9 @@ async function loadWidgets() {
     console.error("Widget Load Error:", error);
 
     // Optional fallback UI
-    const container = document.getElementById("servicesContainer");
+    const container = document.getElementById("widgetsContainer");
     if (container) {
-      container.innerHTML = "<p style='text-align:center;'>Failed to load services</p>";
+      container.innerHTML = "<p style='text-align:center;'>Failed to load widgets</p>";
     }
   }
 }
