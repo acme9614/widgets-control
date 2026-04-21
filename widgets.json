@@ -1,53 +1,67 @@
 {
-  "services": [
-    {
-      "id": "scheme",
-      "name": "Scheme",
-      "icon": "https://cdn-icons-png.flaticon.com/128/10150/10150740.png",
-      "action": "navigateToScheme",
-      "enabled": true
-    },
-    {
-      "id": "bank",
-      "name": "Bank",
-      "icon": "https://cdn-icons-png.flaticon.com/128/2830/2830155.png",
-      "action": "navigateToBankDetails",
-      "enabled": true
-    },
-    {
-      "id": "kyc",
-      "name": "KYC",
-      "icon": "https://cdn-icons-png.flaticon.com/128/10457/10457799.png",
-      "action": "navigateToKyc",
-      "enabled": true
-    },
-    {
-      "id": "rate",
-      "name": "Rate",
-      "icon": "https://cdn-icons-png.flaticon.com/128/592/592015.png",
-      "action": "navigateToRate",
-      "enabled": true
-    },
-    {
-      "id": "history",
-      "name": "History",
-      "icon": "https://cdn-icons-png.flaticon.com/128/2277/2277956.png",
-      "action": "navigateTransactionHistory",
-      "enabled": true
-    },
-    {
-      "id": "order",
-      "name": "Order",
-      "icon": "https://cdn-icons-png.flaticon.com/128/10597/10597732.png",
-      "action": "navigateToMyOrder",
-      "enabled": true
-    },
-    {
-      "id": "gold",
-      "name": "Gold",
-      "icon": "https://cdn-icons-png.flaticon.com/128/10040/10040888.png",
-      "action": "navigateToDigitalGold",
-      "enabled": true
-    }
-  ]
+    "services": [
+        {
+            "id": "scheme",
+            "name": "Scheme",
+            "icon": "https://cdn-icons-png.flaticon.com/128/10150/10150740.png",
+            "action": "navigateToScheme",
+            "enabled": true
+        },
+        {
+            "id": "bank",
+            "name": "Bank",
+            "icon": "https://cdn-icons-png.flaticon.com/128/2830/2830155.png",
+            "action": "navigateToBankDetails",
+            "enabled": true
+        },
+        {
+            "id": "kyc",
+            "name": "KYC",
+            "icon": "https://cdn-icons-png.flaticon.com/128/10457/10457799.png",
+            "action": "navigateToKyc",
+            "enabled": true
+        },
+        {
+            "id": "rate",
+            "name": "Rate",
+            "icon": "https://cdn-icons-png.flaticon.com/128/592/592015.png",
+            "action": "navigateToRate",
+            "enabled": true
+        },
+        {
+            "id": "history",
+            "name": "History",
+            "icon": "https://cdn-icons-png.flaticon.com/128/2277/2277956.png",
+            "action": "navigateTransactionHistory",
+            "enabled": true
+        },
+        {
+            "id": "order",
+            "name": "Order",
+            "icon": "https://cdn-icons-png.flaticon.com/128/10597/10597732.png",
+            "action": "navigateToMyOrder",
+            "enabled": true
+        },
+        {
+            "id": "gold",
+            "name": "Gold",
+            "icon": "https://cdn-icons-png.flaticon.com/128/10040/10040888.png",
+            "action": "navigateToDigitalGold",
+            "enabled": false
+        },
+        {
+            "id": "profile",
+            "name": "Profile",
+            "icon": "https://cdn-icons-png.flaticon.com/128/1144/1144760.png",
+            "action": "navigateToUserProfile",
+            "enabled": true
+        },
+        {
+            "id": "try-on",
+            "name": "Virtual Try-On",
+            "icon": "assets/virtual.png",
+            "action": "navigateToARVirtualTryOn",
+            "enabled": true
+        }
+    ]
 }
